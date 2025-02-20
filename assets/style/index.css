@@ -1,0 +1,265 @@
+/* Base Styles */
+body {
+  margin: 0px;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Navbar Styles */
+#navbar_Container {
+  position: ;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: rgba(225, 232, 232, 0.826);
+  width: 100%;
+}
+
+#navbar > div {
+  display: flex;
+  width: 36%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#navbar > div > h1 > a {
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+#navbar > div > h1 > a:hover {
+  color: crimson;
+}
+
+#navbar > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#navbar > div > img {
+  width: 180px;
+  cursor: pointer;
+}
+
+#navbar > div > button {
+  cursor: pointer;
+  color: white;
+  background-color: crimson;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  margin-right: 50px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+#navbar > div > button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* Search Bar Styles */
+#search-container {
+  margin-top: 70px;
+}
+
+#search-box-div {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-image: url("https://t4.ftcdn.net/jpg/05/15/36/49/360_F_515364999_FWCwO32pj2o0NCGAzGuyG88HOmApK3py.jpg");
+  background-size: 100%;
+}
+
+#search-box-div > img {
+  width: 100%;
+  height: 400px;
+}
+
+#search-box-div > div {
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+#search-box-div > div > h1 {
+  font-size: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#search-box-div > div > form > input {
+  margin-left: -80px;
+  width: 400px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+#search-box-div > div > form > button {
+  height: 36px;
+  border-radius: 0 5px 5px 0;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+/* Random Category Grid */
+#random-container {
+  margin-top: 20px;
+}
+
+#random_div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90%;
+  padding: 4%;
+}
+
+#random_div > div {
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  height: 350px;
+  border-radius: 10px 0 10px 0;
+}
+
+#random_div > div > h2 {
+  margin-bottom: -11px;
+}
+
+#random_div > div > p {
+  text-align: center;
+  padding: 20px;
+}
+
+#random_div > div > img {
+  width: 100%;
+  height: 200px;
+}
+
+/* Search Results Section */
+#searched_results {
+  width: 100%;
+  padding: 2%;
+}
+
+#results-container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#results-container > div {
+  display: flex;
+  width: 100%;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 20px 0 20px 0;
+  overflow: hidden;
+}
+
+#results-container > div > div:first-child {
+  width: 30%;
+  background-color: rgb(35, 31, 31);
+  height: 300px;
+}
+
+#results-container > div > div:first-child > img {
+  width: 100%;
+}
+
+#results-container > div > div:last-child {
+  width: 70%;
+  height: 300px;
+  padding: 2%;
+  color: white;
+  background-color: rgb(35, 31, 31);
+}
+
+/* Mobile Adjustments for Navbar and Search Bar */
+@media (max-width: 768px) {
+  /* Navbar Adjustments */
+  #navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  /* Align 'Food Recipe' text to the right */
+  #navbar > div:first-child {
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  #navbar > div:first-child > h1 > a {
+    font-size: 18px;
+    text-align: right;
+  }
+
+  /* Search Bar Adjustments */
+  #search-box-div > div {
+    margin-top: 50px;
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #search-box-div > div > h1 {
+    font-size: 35px;
+  }
+
+  #search-box-div > div > form > input {
+    width: 200px;
+    margin-left: 0;
+  }
+
+  #search-box-div > div > form > button {
+    width: 100px;
+    height: 36px;
+  }
+}
+
+/* Extra Small Mobile Adjustments */
+@media (max-width: 480px) {
+  /* Navbar Adjustments for Extra Small Mobile */
+  #navbar > div:first-child > h1 > a {
+    font-size: 16px;
+  }
+
+  #search-box-div > div > h1 {
+    font-size: 30px;
+  }
+
+  #search-box-div > div > form > input {
+    width: 50%;
+  }
+
+  #search-box-div > div > form > button {
+    width: 90%;
+    height: 40px;
+  }
+}
